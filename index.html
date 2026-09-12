@@ -461,7 +461,7 @@ function renderHero(now){
     metaEl.textContent = "好好休息，或练琴复习";
     cLabel.textContent = "距下周一";
     const nextMon = new Date(now);
-    const add = dow===0 ? 1 : 7;
+    const add = dow===0 ? 1 : 8 - dow;
     nextMon.setDate(now.getDate()+add); nextMon.setHours(8,0,0,0);
     cDown.textContent = fmtDur((nextMon-now)/1000);
     cSub.textContent = "第一节 · 08:00";
